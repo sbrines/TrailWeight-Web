@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — TrailWeight</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .prose { max-width: 680px; margin: 0 auto; padding: 80px 24px; }
-    .prose h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: -.02em; }
-    .prose .updated { color: var(--text-muted); font-size: 14px; margin-bottom: 48px; }
-    .prose h2 { font-size: 18px; font-weight: 600; margin: 36px 0 12px; }
-    .prose p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
-    .prose ul { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; padding-left: 24px; }
-    .prose li { margin-bottom: 6px; }
-    .prose a { color: var(--indigo); text-decoration: none; }
-    .prose a:hover { text-decoration: underline; }
-    .back { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 14px; text-decoration: none; margin-bottom: 32px; }
-    .back:hover { color: var(--text); }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>TrailWeight — Privacy Policy</title>
+  <meta name="description" content="TrailWeight privacy policy: no account, no tracking, your data stored in your own iCloud.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="prose">
-    <a href="/" class="back">← TrailWeight</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="icon.png" alt="TrailWeight icon">TrailWeight</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 28, 2026</p>
+    <p class="updated">Last updated: June 24, 2026</p>
 
-    <h2>Overview</h2>
-    <p>TrailWeight is designed with privacy as a core principle. The app stores all your data locally on your device. We do not collect, transmit, or sell any personal information.</p>
+    <p>TrailWeight is built to respect your privacy. This policy explains what data the app handles and how. In short: <strong>TrailWeight has no account, no servers of our own, and no third-party analytics or tracking. Your data stays on your device and in your private iCloud.</strong></p>
 
-    <h2>Data We Do Not Collect</h2>
+    <h2>Data you create</h2>
+    <p>TrailWeight stores the information you enter — gear items (name, weight, category, notes, optional purchase link, optional photo), pack lists, trips, and weight-history snapshots. This data is kept on your device and, if you are signed into iCloud, synced through Apple's CloudKit to your own private iCloud account.</p>
+
+    <h2>Where your data is stored</h2>
     <ul>
-      <li>No account or registration is required</li>
-      <li>No analytics or usage tracking</li>
-      <li>No advertising identifiers</li>
-      <li>No crash reporting sent to third parties</li>
-      <li>No personal information of any kind</li>
+      <li><strong>On your device</strong>, in the app's local database.</li>
+      <li><strong>In your private iCloud</strong> (via Apple CloudKit) so it syncs across your own devices signed into the same Apple ID. This data is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>. The developer cannot access it.</li>
     </ul>
+    <p>We do not operate any server that receives or stores your TrailWeight data.</p>
 
-    <h2>Data Stored on Your Device</h2>
-    <p>TrailWeight stores the following data locally using Apple's SwiftData framework (iOS/macOS) or Room database (Android):</p>
+    <h2>No account, no tracking</h2>
+    <p>There is no sign-up or login. TrailWeight contains <strong>no third-party advertising, analytics, or tracking SDKs</strong>, and does not collect a device identifier or profile you. We do not sell or share your data, because we never receive it.</p>
+
+    <h2>Network requests</h2>
+    <p>TrailWeight only makes network requests when you actively use these optional features:</p>
     <ul>
-      <li>Gear inventory items (names, weights, categories, notes)</li>
-      <li>Trip details and pack lists</li>
-      <li>Resupply logistics</li>
-      <li>Weight history snapshots</li>
+      <li><strong>Barcode &amp; product lookup.</strong> When you scan a barcode or search a product name, the app queries the public <a href="https://world.openproductsfacts.org/" rel="noopener">Open Products Facts</a> database to fetch product details. Only the barcode or search text you provide is sent.</li>
+      <li><strong>Gear link preview.</strong> If you add a purchase URL to a gear item, the app may fetch that page to read basic details (such as a title) you can use. Only the URL you entered is requested.</li>
     </ul>
-    <p>This data never leaves your device unless you explicitly export it using the app's built-in share sheet.</p>
+    <p>These requests are not used to identify you, and no personal account information is attached to them.</p>
 
-    <h2>URL Auto-Import Feature</h2>
-    <p>When you paste a product URL to auto-import weight data, the app makes a direct network request from your device to the retailer's website to fetch publicly available product information. No data from this request is sent to TrailWeight servers (there are none). The request goes directly from your device to the retailer.</p>
+    <h2>Camera and photos</h2>
+    <p>If you choose to scan a barcode or attach a photo to a gear item, the app asks for Camera and/or Photo Library permission. Photos you add are stored with your gear data (on device and in your iCloud) and are not uploaded anywhere else.</p>
 
-    <h2>Camera and Photo Library</h2>
-    <p>TrailWeight may request access to your camera or photo library to add photos to gear items. Photos are stored only on your device and are never uploaded anywhere.</p>
+    <h2>Purchases</h2>
+    <p>TrailWeight does not currently offer in-app purchases or subscriptions. Should that change, payments would be handled entirely by Apple under Apple's terms; we would not receive your payment details.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>TrailWeight does not integrate with any third-party analytics, advertising, or data collection services.</p>
+    <h2>Children's privacy</h2>
+    <p>TrailWeight is a general-audience app and does not knowingly collect personal information from children.</p>
 
-    <h2>Children's Privacy</h2>
-    <p>TrailWeight does not knowingly collect any information from anyone, including children under 13.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>If this policy changes, the updated version will be posted at this URL with a new "Last updated" date.</p>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we will update the date above and post the revised version on this page.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy? Email <a href="mailto:sbrines248@gmail.com">sbrines248@gmail.com</a>.</p>
-  </div>
+    <p>Questions about privacy? Email <a href="mailto:sbrines248@gmail.com?subject=TrailWeight%20Privacy">sbrines248@gmail.com</a>.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2026 TrailWeight</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
